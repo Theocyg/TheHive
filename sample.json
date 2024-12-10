@@ -1,0 +1,196 @@
+{
+    "Initial Access": {
+        "Default": {
+            "Identification": [
+                "Triage (Initial - Affectation Automatique/Manuelle)",
+                "Informer l'utilisateur/Rassembler des informations et des preuves"
+            ],
+            "Containment": [],
+            "Eradication": [
+                "Réparer/Mettre à jour le système/le logiciel cible (ou ré-imager et mettre à jour) - SM"
+            ],
+            "Recovery": [
+                "Surveiller les utilisateurs/systèmes cibles - SIEM/UEBA",
+                "Rechercher des IOCs - Data Lake",
+                "Mettre à jour l'image/Mettre à jour la politique - SM"
+            ],
+            "Lessons Learned": [
+                "Mettre à jour le Wiki CSIRT (si applicable)",
+                "Créer un rapport d'incident - 5W et 1H",
+                "Remarques pour les points d'amélioration"
+            ]
+        },
+        "Drive-by Compromise": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - FWs/Proxy/IDS-IPS/Inspection SSL",
+                "Requête de renseignement sur les menaces / Vérification de la réputation - TI",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités"
+            ],
+            "Containment": [
+                "Bloquer l'application/Isoler le système cible - EP/EDR",
+                "Bloquer l'URL/IP/IP Segment de l'attaquant - Proxy/FWs"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Exploit Public-Facing Application": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - FWs/Proxy/WAF/IDS-IPS",
+                "Requête de renseignement sur les menaces / Vérification de la réputation - TI",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités",
+                "Inspection approfondie des paquets - PCAP",
+                "Enrichissement des risques compte/service - CMDB/Analyse des vulnérabilités/UEBA"
+            ],
+            "Containment": [
+                "Bloquer l'application/Isoler le système cible - EP/EDR/Proxy/FWs/WAF",
+                "Réinitialiser les comptes, les jetons, les secrets - AD/Services d'annuaire/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "External Remote Services": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - AD/Services d'annuaire/UEBA/FWs/IDS-IPS",
+                "Requête de renseignement sur les menaces / Vérification de la réputation - TI",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Enrichissement des risques compte/service - CMDB/Analyse des vulnérabilités/UEBA"
+            ],
+            "Containment": [
+                "Bloquer l'URL/IP/IP Segment de l'attaquant - Proxy/FWs/WAF",
+                "Réinitialiser le compte/Appliquer MFA (si applicable) - AD/Services d'annuaire/IAM-IDM/PIM/MFA",
+                "Liste noire/blanche des listes d'accès / sources"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Hardware Additions": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - DHCP/FWs/Proxy",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités"
+            ],
+            "Containment": [
+                "Blacklist/Whitelist - Contrôles d'accès réseau/appareil"
+            ],
+            "Eradication": [
+                "Mettre à jour les points de service/Configurer les politiques d'accès"
+            ],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Replication Through Removable Media": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - EP/UEBA/FWs/Proxy/Inspection SSL",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités",
+                "Informer l'utilisateur/Rassembler des informations et des preuves"
+            ],
+            "Containment": [
+                "Bloquer l'application/Isoler le système cible - EP/EDR",
+                "Réinitialiser les comptes, les jetons, les secrets - AD/Services d'annuaire/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Spearphishing Attachment": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - Email GW/EP/FWs/Proxy/IDS-IPS/Inspection SSL",
+                "Requête de renseignement sur les menaces / Enquêter sur les IOCs et la campagne",
+                "Sandbox Email et/ou pièce jointe",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Informer l'utilisateur/Rassembler des informations et des preuves",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités"
+            ],
+            "Containment": [
+                "Bloquer l'URL/IP/IP Segment de l'attaquant - Proxy/FWs",
+                "Bloquer l'application/Isoler le système cible - EP/EDR",
+                "Réinitialiser les comptes, les jetons, les secrets - AD/Services d'annuaire/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Spearphishing Link": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - Email GW/EP/FWs/Proxy/Inspection SSL",
+                "Requête de renseignement sur les menaces / Enquêter sur les IOCs et la campagne",
+                "Sandbox Email et/ou pièce jointe",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Informer l'utilisateur/Rassembler des informations et des preuves",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités"
+            ],
+            "Containment": [
+                "Bloquer l'URL/IP/IP Segment de l'attaquant - Proxy/FWs",
+                "Bloquer l'application/Isoler le système cible - EP/EDR",
+                "Réinitialiser les comptes, les jetons, les secrets - AD/Services d'annuaire/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Spearphishing via Service": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - FWs/Proxy/IDS-IPS/Inspection SSL",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Informer l'utilisateur/Rassembler des informations et des preuves",
+                "Requête de renseignement sur les menaces / Enquêter sur les IOCs et la campagne",
+                "Enrichissement du système - EP/EDR/CMDB/Analyse des vulnérabilités",
+                "Sandbox Email et/ou pièce jointe"
+            ],
+            "Containment": [
+                "Bloquer l'URL/IP/IP Segment de l'attaquant - Proxy/FWs",
+                "Bloquer l'application/Isoler le système cible - EP/EDR",
+                "Réinitialiser les comptes, les jetons, les secrets - AD/Services d'annuaire/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Supply Chain Compromise": {
+            "Identification": [
+                "Investigate Logs,Flows and Alerts - FWs/WAF/Proxy/IDS-IPS/SSL Inspection/EP/UEBA",
+                "System Enrichment - EP/EDR/FIM/CMDB/Vuln.Scanning",
+                "Threat Intel Query / Investigate IOCs and Campaign",
+                "Risk Enrichment / Service Enrichment / Approval - CMDB/Vuln. Scanning/UEBA/SM"
+            ],
+            "Containment": [
+                "Block Application/Isolate Target System - EP/EDR/Proxy/FWs",
+                "Reset Accounts,Token,Secret - AD/Directory Services/IAM-IDM/PIM/Keyvault"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Trusted Relationship": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - AD/Services d'annuaire/UEBA/FWs/IDS-IPS/VPN",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Informer l'utilisateur/Rassembler des informations et des preuves",
+                "Enrichissement des risques / Enrichissement des services / Approbation - CMDB/Analyse des vulnérabilités/UEBA/SM"
+            ],
+            "Containment": [
+                "Désactiver le compte/Retirer les permissions d'accès - AD/Services d'annuaire/IAM-IDM/PIM"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        },
+        "Valid Accounts": {
+            "Identification": [
+                "Enquêter sur les journaux, les flux et les alertes - AD/Services d'annuaire/UEBA/FWs/IDS-IPS/VPN",
+                "Enrichissement et analyse des utilisateurs - AD/Services d'annuaire/UEBA",
+                "Informer l'utilisateur/Rassembler des informations et des preuves",
+                "Enrichissement des risques / Enrichissement des services / Approbation - CMDB/Analyse des vulnérabilités/UEBA/SM"
+            ],
+            "Containment": [
+                "Réinitialiser les comptes, les jetons, les secrets/Appliquer MFA (si applicable) - AD/Services d'annuaire/IAM-IDM/PIM/MFA"
+            ],
+            "Eradication": [],
+            "Recovery": [],
+            "Lessons Learned": []
+        }
+    }
+}
